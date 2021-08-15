@@ -1,0 +1,7 @@
+C:\Users\ziote\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+C:\Users\ziote\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\ziote\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\GetSystemInfo.exe.config
+C:\Users\ziote\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\GetSystemInfo.exe
+C:\Users\ziote\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\GetSystemInfo.pdb
+C:\Users\ziote\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\GetSystemInfo.exe
+C:\Users\ziote\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\GetSystemInfo.pdb
