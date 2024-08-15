@@ -32,7 +32,8 @@ namespace Get_SystemInformation
             }
             if (doVerbose) { Console.WriteLine("Verbose mode enabled."); }
 
-
+            //Application Version
+            string AppVersion = "GetSystemInfo v1.2\n";
             //Init Strings
             if (doVerbose) { Console.Write("Init Strings"); }
             string OSMachineName = null;
@@ -81,15 +82,30 @@ namespace Get_SystemInformation
             //???
 
             //Declare file path:
+            Console.WriteLine(AppVersion);
             if (doVerbose){ Console.Write(" - Success\nDeclare file path"); }
-            string DesktopPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Desktop";
+            string DesktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string FilePath = DesktopPath + @"\System_Info.txt";
+
+            // Check for desktop
+            if (!Directory.Exists(DesktopPath))
+            {
+                Console.WriteLine("Failed to find Desktop.");
+                Console.WriteLine("Save in current folder?");
+                System.ConsoleKeyInfo inputKey = Console.ReadKey();
+                if (inputKey.Key.ToString().ToLower() == "y") {
+                    DesktopPath = Directory.GetCurrentDirectory();
+                }
+                else {
+                    System.Environment.Exit(1);
+                }
+            }
 
             //Manage File Operations
             if (doVerbose) { Console.Write(" - Success\nManage File Operations"); }
             ProcessStartInfo OpenFolder = new ProcessStartInfo
             {
-                Arguments = DesktopPath,
+                Arguments = FilePath,
                 FileName = "explorer.exe"
             };
             ProcessStartInfo OpenTextFile = new ProcessStartInfo
